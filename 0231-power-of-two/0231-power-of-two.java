@@ -1,13 +1,9 @@
 class Solution {
     public boolean isPowerOfTwo(int n) {
-        long base = 1;
-        while (base <= n) {
-            System.out.println(base);
-            if (base == n) {
-                return true;
-            }
-            base *= 2;
+        if (n >= 1) {
+            return (n & (n - 1)) == 0;
+        } else {
+            return false;
         }
-        return false;
     }
 }
